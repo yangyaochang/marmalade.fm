@@ -8,6 +8,9 @@ import {
 import FeatureMix from './FeatureMix'
 import Header from './Header'
 import Home from './Home'
+import mixesData from '../data/mixes'
+
+
 
 const About = () => <h1>About</h1>
 const Archive = () => <h1>Archive</h1>
@@ -17,12 +20,32 @@ class App extends Component{
     super(props)
     this.state = {
       palying: false,
-      currentMix: ''
+      currentMix: '',
+      mixIds: mixesData,
+      mix: null,
+      mixes: []
     }
   }
 
   componentDidMount() {
     this.mountAudio()
+    this.fetchMixes()
+  }
+
+  fetchMixes = async() => {
+    const {mixIds} = this.state
+
+    mixIds.map(async id => {
+      try {
+        const response = await fetch(`https://api.mixcloud.com${id}`)
+        const data = await response.json()
+        this.setState((prevState, props) => ({
+          mixes: [...prevState.mixes, data]
+        }))
+      } catch(error) {
+        console.log(error)
+      }
+    })
   }
 
   mountAudio = async() => {
@@ -39,7 +62,6 @@ class App extends Component{
         playing:true
       })
     })
-    console.log(this.widget)
   }
 
   // this is an object literal
@@ -48,6 +70,11 @@ class App extends Component{
       this.widget.togglePlay()
     }, 
     playMix: (mixName) => {
+      const currentMix = this.state.currentMix
+      if (mixName === currentMix) {
+        return this.widget.tooglePlay()
+      }
+      
       this.setState({
         currentMix: mixName
       })
