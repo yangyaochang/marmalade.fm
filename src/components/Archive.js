@@ -4,7 +4,7 @@ import PlayMix from './PlayMix'
 
 const Archive = ({mixes, ...props}) => {
     return (
-        <ul className = 'list pl0 archive'>
+        <ul className = 'list pl0 archive mv0 pad-bottom'>
             {mixes.map(mix => (
                 <li className = 'ph3 ph4-l'>
                     <PlayMix {...props} id = {mix.key}>

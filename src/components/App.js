@@ -9,11 +9,10 @@ import FeatureMix from './FeatureMix'
 import Header from './Header'
 import Home from './Home'
 import Archive from './Archive'
+import About from './About'
 import mixesData from '../data/mixes'
 
 
-
-const About = () => <h1>About</h1>
 
 class App extends Component{
   constructor(props) {
@@ -106,7 +105,7 @@ class App extends Component{
                   <Archive {...this.state} {...this.actions}/>
                 </Route>
                 <Route path="/about">
-                  <About/>
+                  <About {...this.state}/>
                 </Route>
               </Switch>
             </div>
