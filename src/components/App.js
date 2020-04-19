@@ -8,12 +8,12 @@ import {
 import FeatureMix from './FeatureMix'
 import Header from './Header'
 import Home from './Home'
+import Archive from './Archive'
 import mixesData from '../data/mixes'
 
 
 
 const About = () => <h1>About</h1>
-const Archive = () => <h1>Archive</h1>
 
 class App extends Component{
   constructor(props) {
@@ -83,6 +83,8 @@ class App extends Component{
   }
 
   render() {
+    const [firstMix = {}] = this.state.mixes
+
     return (
       // the Router component wraps out the whole page and lets us use react-router
       <Router>
@@ -91,7 +93,7 @@ class App extends Component{
           {/* this div contains our page (excluding audio player)*/}
           <div className = 'flex-l justify-end'>
             {/* FeatureMix (needs styling and updating) */}
-            <FeatureMix/>
+            <FeatureMix {...this.state} {...this.actions} {...firstMix} id = {firstMix.key}/>
             <div className = 'w-50-l relative z-1  '>
               {/* Header (needs styling and updating) */}
               <Header/>
@@ -101,7 +103,7 @@ class App extends Component{
                   <Home {...this.state} {...this.actions}/>
                 </Route>
                 <Route path="/archive">
-                  <Archive/>
+                  <Archive {...this.state} {...this.actions}/>
                 </Route>
                 <Route path="/about">
                   <About/>
