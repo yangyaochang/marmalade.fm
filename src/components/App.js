@@ -98,13 +98,13 @@ class App extends Component{
               <Header/>
               {/* Routed Page */}
               <Switch>
-                <Route exact path="/">
+                <Route exact path="/marmalade.fm">
                   <Home {...this.state} {...this.actions}/>
                 </Route>
-                <Route path="/archive">
+                <Route path="/marmalade.fm/archive">
                   <Archive {...this.state} {...this.actions}/>
                 </Route>
-                <Route path="/about">
+                <Route path="/marmalade.fm/about">
                   <About {...this.state}/>
                 </Route>
               </Switch>

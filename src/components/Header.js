@@ -9,13 +9,13 @@ const Header = props => {
                 <li className = 'mh2'>
                     {/* we use NavLink component to give us active styles when we're on the current page */}
                     {/* Using the exact prop makes sure it matches exactly */}
-                    <NavLink exact to = '/' className = 'nav-link link biryani-black f6 ttu gray'>What's hot</NavLink>
+                    <NavLink exact to = '/marmalade.fm' className = 'nav-link link biryani-black f6 ttu gray'>What's hot</NavLink>
                 </li>
                 <li className = 'mh2'>
-                    <NavLink to = '/archive' className = 'nav-link link biryani-black f6 ttu gray'>Archive</NavLink>
+                    <NavLink to = '/marmalade.fm/archive' className = 'nav-link link biryani-black f6 ttu gray'>Archive</NavLink>
                 </li>
                 <li className = 'mh2'>
-                    <NavLink to = '/about' className = 'nav-link link biryani-black f6 ttu gray'>About</NavLink>
+                    <NavLink to = '/marmalade.fm/about' className = 'nav-link link biryani-black f6 ttu gray'>About</NavLink>
                 </li>
             </ul>
         </header>
