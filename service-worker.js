@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/marmalade.fm/precache-manifest.eb3fe09a5f1d2afc77036cd193d2facc.js"
+  "/marmalade.fm/precache-manifest.a710a06b11e59006398605816d9a30d6.js"
 );
 
 self.addEventListener('message', (event) => {

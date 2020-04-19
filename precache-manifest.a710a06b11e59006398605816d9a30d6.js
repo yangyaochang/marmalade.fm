@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbc1e12678e9dad6bf5a97b89d801ca4",
+    "revision": "38c46e395210f5dc7072bbb7d44dca36",
     "url": "/marmalade.fm/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marmalade.fm/static/css/2.2dc38268.chunk.css"
   },
   {
-    "revision": "1ef29102812450e5c844",
+    "revision": "dbfe81dbe9902f0a694e",
     "url": "/marmalade.fm/static/css/main.3cec886b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marmalade.fm/static/js/2.b5eb1cab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ef29102812450e5c844",
-    "url": "/marmalade.fm/static/js/main.4f025e69.chunk.js"
+    "revision": "dbfe81dbe9902f0a694e",
+    "url": "/marmalade.fm/static/js/main.a0dd4e97.chunk.js"
   },
   {
     "revision": "13d9988bae613bfc16eb",
